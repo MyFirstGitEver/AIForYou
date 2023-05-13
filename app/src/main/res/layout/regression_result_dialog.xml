@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/wTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/wTxt"
+        app:layout_constraintStart_toStartOf="@+id/wTxt"
+        app:layout_constraintTop_toBottomOf="@+id/wTxt" />
+
+    <TextView
+        android:id="@+id/errorTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/bTxt"
+        app:layout_constraintStart_toStartOf="@+id/bTxt"
+        app:layout_constraintTop_toBottomOf="@+id/bTxt" />
+</androidx.constraintlayout.widget.ConstraintLayout>

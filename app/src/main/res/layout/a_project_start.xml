@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="150dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/round_corner_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/categoryImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_create_project" />
+
+    <TextView
+        android:id="@+id/toolNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/new_project_title"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/editOrAddImg"
+        app:layout_constraintEnd_toEndOf="@+id/categoryImg"
+        app:layout_constraintStart_toStartOf="@+id/categoryImg"
+        app:layout_constraintTop_toBottomOf="@+id/categoryImg" />
+
+    <ImageView
+        android:id="@+id/editOrAddImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/toolNameTxt"
+        app:layout_constraintStart_toStartOf="@+id/toolNameTxt"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        app:tint="@android:color/holo_blue_dark" />
+</androidx.constraintlayout.widget.ConstraintLayout>
