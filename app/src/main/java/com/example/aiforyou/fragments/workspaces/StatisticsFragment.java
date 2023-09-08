@@ -57,7 +57,7 @@ public class StatisticsFragment extends DialogFragment {
         new MyTimer((total) -> {
             try{
                 draw();
-            } catch (NullPointerException e) {
+            } catch (NullPointerException | IllegalStateException e) {
                 openErrorDialog("Something goes wrong with the arguments!");
                 dismiss();
             }

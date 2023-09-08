@@ -4,6 +4,7 @@ import com.example.aiforyou.custom.ProjectDTO;
 import com.example.aiforyou.custom.ReceiptDTO;
 import com.example.aiforyou.custom.ServiceDTO;
 import com.example.aiforyou.entities.ProjectEntity;
+import com.example.aiforyou.mytools.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -34,7 +35,7 @@ public interface AIService {
             .create();
 
     AIService service = new Retrofit.Builder()
-            .baseUrl("http://192.168.0.102:8080/")
+            .baseUrl("http://" + Constants.DOMAIN + ":8080/")
             .client(okHttpClient)
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(gson)).build().create(AIService.class);

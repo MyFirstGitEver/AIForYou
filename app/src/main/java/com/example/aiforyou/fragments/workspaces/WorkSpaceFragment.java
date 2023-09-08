@@ -448,6 +448,10 @@ public class WorkSpaceFragment extends DialogFragment {
                             openErrorDialog("Something wrong happens :(");
                             return;
                         }
+                        else if(response.code() == HttpURLConnection.HTTP_NOT_ACCEPTABLE) {
+                            openErrorDialog("Your model usage has exceeded the limit(five times per unpurchased model)");
+                            return;
+                        }
 
                         showRegressionResult(response.body());
                     }
@@ -498,6 +502,10 @@ public class WorkSpaceFragment extends DialogFragment {
                             public void onResponse(Call<String> call, Response<String> response) {
                                 if(response.code() == HttpURLConnection.HTTP_INTERNAL_ERROR) {
                                     openErrorDialog("Something wrong happens :(");
+                                    return;
+                                }
+                                else if(response.code() == HttpURLConnection.HTTP_NOT_ACCEPTABLE) {
+                                    openErrorDialog("Your model usage has exceeded the limit(five times per unpurchased model)");
                                     return;
                                 }
 

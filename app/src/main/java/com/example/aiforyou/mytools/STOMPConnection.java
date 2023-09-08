@@ -19,7 +19,7 @@ public class STOMPConnection {
     {
         gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX").create();
 
-        client = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "ws://" + "192.168.0.102:8080" + "/ws");
+        client = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "ws://" + Constants.DOMAIN + ":8080/ws");
         client.connect();
 
         this.listener = listener;
